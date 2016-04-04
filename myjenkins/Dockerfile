@@ -7,7 +7,8 @@
 # Credits to https://github.com/camiloribeiro/cdeasy
 # - https://github.com/camiloribeiro/cdeasy/blob/master/docker/jenkins/Dockerfile
 
-FROM jenkins:latest
+# FROM jenkins:latest
+FROM gmacario/jenkins:test-pull-219
 MAINTAINER Gianpaolo Macario <gmacario@gmail.com>
 
 USER root
