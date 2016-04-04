@@ -36,9 +36,9 @@ RUN curl -o /usr/local/bin/docker-compose -fsSL \
     chmod +x /usr/local/bin/docker-compose
 
 # Install Jenkins plugins from the list at plugins.txt
-COPY plugins.txt /usr/share/jenkins/plugins.txt
-RUN dos2unix /usr/share/jenkins/plugins.txt
-RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
+COPY plugins.txt /usr/share/jenkins/ref/
+RUN dos2unix /usr/share/jenkins/ref/plugins.txt
+RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
 
 COPY start.sh /tmp/start.sh
 RUN chmod +x /tmp/start.sh && dos2unix /tmp/start.sh
